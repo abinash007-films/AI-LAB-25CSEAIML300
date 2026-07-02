@@ -1,2 +1,2 @@
-# AI-LAB300-3RD
+# AI-LAB-CSEAIML300
 AI Lab Experiments
