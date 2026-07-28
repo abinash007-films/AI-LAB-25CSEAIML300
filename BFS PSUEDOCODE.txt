@@ -1,0 +1,39 @@
+create an empty list called VISITED (to remember where we have been)
+
+create a list called QUEUE and add start_node as its first item
+while the QUEUE is not empty DO
+a. current_node = remove the first item from the front of the QUEUE
+b. current_node is NOT in VISITED
+   i. Peint Exploring node : current node
+   ii. Add current_node to the VISITED list
+   iii. FOR each neighbor connected to current node in the graph
+	i. if neighbor is NOT in VISITED and neighbor is NOT in QUEUE
+   	   a. add neighbor to the back of the queue
+4.RETURN the VISITED list
+Part 2. THE MAIN PROGRAM
+GOAL : Ask the user to define the connection of a graph ,store them as an Adjacency List and then run the traversal
+
+
+algorithm:
+
+1.Create an empty dictionary/map called student_graph.
+2.Print"How many edges(connections) does your graph have?"
+3.num_edges = get integer input from the user
+4.print " enter each edge separated by a space."
+5.loop from 1 to num_edges.
+
+   a. get input from the user and split it into two variables : u and v.
+
+   b. check and initialize nodes:
+       i. If u does not exist in student_graph:
+         1. add u to student_graph with an empty list.
+      ii. If v does not exist in student_graph:
+         1. add v to student_graph with an empty list.
+   c. create the undirected connection (two-way street):
+       i. add v to u's list of neighbours.
+      ii. add u to v's list of neighbours.
+6. Print "enter the starting node for BFS".
+7. start = Get input from the user
+8. Print "Your graph Dictionary:" + student_graph
+9. Print "Starting BFS Traversal".
+10. Call BFS_traversal(student_graph,start)
